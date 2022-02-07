@@ -93,6 +93,15 @@ class GameScene: SKScene {
             gameOver.position = CGPoint(x: 512, y: 384)
             gameOver.zPosition = 1
             addChild(gameOver)
+
+            let gameOverScoreLabel = SKLabelNode(fontNamed: "chalkduster")
+            gameOverScoreLabel.text = "Final Score: \(score)"
+            gameOverScoreLabel.fontSize = 44
+            gameOverScoreLabel.position = CGPoint(x: 512, y: 300)
+            gameOverScoreLabel.zPosition = 1
+            addChild(gameOverScoreLabel)
+            gameScore.removeFromParent()
+            
             run(SKAction.playSoundFileNamed("sfx-defeat6.mp3", waitForCompletion: false))
             return
         }
