@@ -57,18 +57,26 @@ class GameScene: SKScene {
             
             if !whackSlot.isVisible { continue }
             if whackSlot.isHit { continue }
-            
             whackSlot.hit()
             
             if node.name == "CharFriend" {
                 score -= 5
                 
+                if let smokeEffect = SKEmitterNode(fileNamed: "smoke") {
+                    smokeEffect.position = whackSlot.position
+                    addChild(smokeEffect)
+                }
                 run(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion: false))
+                
             } else if node.name == "CharEnemy" {
                 whackSlot.charNode.xScale = 0.85
                 whackSlot.charNode.yScale = 0.85
                 score += 1
                 
+                if let smokeEffect = SKEmitterNode(fileNamed: "smoke") {
+                    smokeEffect.position = whackSlot.position
+                    addChild(smokeEffect)
+                }
                 run(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false))
             }
         }
