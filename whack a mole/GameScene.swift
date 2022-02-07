@@ -15,6 +15,7 @@ class GameScene: SKScene {
     
     var popupTime = 0.85
     var numberOfRound = 0
+    let smokeEffect = SKEmitterNode(fileNamed: "smoke")
     
     var score = 0 {
         didSet {
@@ -91,6 +92,8 @@ class GameScene: SKScene {
     
     func createEnemy() {
         numberOfRound += 1
+        
+        smokeEffect?.removeFromParent()
         
         if numberOfRound >= 30 {
             for slot in slots {
