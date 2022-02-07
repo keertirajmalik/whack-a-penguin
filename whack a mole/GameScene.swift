@@ -56,15 +56,15 @@ class GameScene: SKScene {
             guard let whackSlot = node.parent?.parent as? WhackSlot else { continue }
             
             if !whackSlot.isVisible { continue }
-            if !whackSlot.isHit { continue }
+            if whackSlot.isHit { continue }
             
             whackSlot.hit()
             
-            if node.name == "charFriend" {
+            if node.name == "CharFriend" {
                 score -= 5
                 
                 run(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion: false))
-            } else if node.name == "charEnemy" {
+            } else if node.name == "CharEnemy" {
                 whackSlot.charNode.xScale = 0.85
                 whackSlot.charNode.yScale = 0.85
                 score += 1
