@@ -17,6 +17,7 @@
 		336815C027AD923C00F86563 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 336815BE27AD923C00F86563 /* whack.caf */; };
 		336815C127AD923C00F86563 /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = 336815BF27AD923C00F86563 /* whackBad.caf */; };
 		336815C327AD94C700F86563 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336815C227AD94C700F86563 /* WhackSlot.swift */; };
+		33C553D727B176310004061F /* sfx-defeat6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33C553D627B176310004061F /* sfx-defeat6.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		336815BE27AD923C00F86563 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		336815BF27AD923C00F86563 /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
 		336815C227AD94C700F86563 /* WhackSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
+		33C553D627B176310004061F /* sfx-defeat6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sfx-defeat6.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				336815B627AD910700F86563 /* LaunchScreen.storyboard */,
 				336815BE27AD923C00F86563 /* whack.caf */,
 				336815BF27AD923C00F86563 /* whackBad.caf */,
+				33C553D627B176310004061F /* sfx-defeat6.mp3 */,
 			);
 			path = "whack a mole";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 				336815C027AD923C00F86563 /* whack.caf in Resources */,
 				336815AA27AD90FE00F86563 /* GameScene.sks in Resources */,
 				336815B527AD910700F86563 /* Assets.xcassets in Resources */,
+				33C553D727B176310004061F /* sfx-defeat6.mp3 in Resources */,
 				336815B827AD910700F86563 /* LaunchScreen.storyboard in Resources */,
 				336815C127AD923C00F86563 /* whackBad.caf in Resources */,
 			);
