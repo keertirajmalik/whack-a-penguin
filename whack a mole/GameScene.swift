@@ -14,6 +14,7 @@ class GameScene: SKScene {
     var slots = [WhackSlot]()
     
     var popupTime = 0.85
+    var numberOfRound = 0
     
     var score = 0 {
         didSet {
@@ -81,6 +82,20 @@ class GameScene: SKScene {
     }
     
     func createEnemy() {
+        numberOfRound += 1
+        
+        if numberOfRound >= 30 {
+            for slot in slots {
+                slot.hide()
+            }
+            
+            let gameOver = SKSpriteNode(imageNamed: "gameOver")
+            gameOver.position = CGPoint(x: 512, y: 384)
+            gameOver.zPosition = 1
+            addChild(gameOver)
+            return
+        }
+        
         popupTime *= 0.991
         
         slots.shuffle()
